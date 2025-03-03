@@ -146,5 +146,5 @@ mashr_pval<-get_lfsr(res_mash$model)
 write.csv(mashr_output, "scz_mashr_post.csv", quote=FALSE)
 write.csv(mashr_pval, "scz_mashr_pval.csv", quote=FALSE)
 
-prob <- compositePosteriorTest(res_mash, assayNames(res.dl))
+prob <- compositePosteriorTest(res_mash, colnames(mashr_output))
 write.csv(prob, "scz_mashr_comppost.csv", quote=FALSE)
